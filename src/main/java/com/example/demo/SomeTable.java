@@ -12,6 +12,7 @@ public class SomeTable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "sometableid")
     private int someTableId;
 
     @Column(name = "title")

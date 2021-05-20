@@ -15,6 +15,6 @@ public class SomeBean implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("SAWQEWQ");
-        someTableService.createSomeTable(new SomeTable( "title"));
+        System.out.println(someTableService.getAllTables());
     }
 }

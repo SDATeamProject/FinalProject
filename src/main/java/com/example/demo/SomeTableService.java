@@ -3,6 +3,8 @@ package com.example.demo;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SomeTableService {
 
@@ -14,5 +16,9 @@ public class SomeTableService {
 
     public SomeTable createSomeTable(SomeTable someTable) {
         return someTableRepository.save(someTable);
+    }
+
+    public List<SomeTable> getAllTables(){
+        return someTableRepository.findAll();
     }
 }
