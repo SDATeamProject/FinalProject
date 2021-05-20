@@ -1,11 +1,12 @@
 package com.example.demo;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping
 public class SomeTableController {
 
     private SomeTableService someTableService;
@@ -17,5 +18,10 @@ public class SomeTableController {
     @GetMapping(path = "/table")
     public List<SomeTable> getAllTables(){
         return someTableService.getAllTables();
+    }
+
+    @PostMapping
+    public SomeTable createSomeTable(@RequestBody SomeTable someTable){
+        return someTableService.saveSomeTable(someTable);
     }
 }

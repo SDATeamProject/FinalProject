@@ -21,4 +21,12 @@ public class SomeTableService {
     public List<SomeTable> getAllTables(){
         return someTableRepository.findAll();
     }
+
+    public List<SomeTable> findAll(){
+       return someTableRepository.findAll();
+    }
+
+    public SomeTable saveSomeTable(SomeTable someTable){
+        return someTableRepository.save(someTable);
+    }
 }

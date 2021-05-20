@@ -13,7 +13,7 @@ public class SomeTable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sometableid")
-    private int someTableId;
+    private int sometableid;
 
     @Column(name = "title")
     private String title;
