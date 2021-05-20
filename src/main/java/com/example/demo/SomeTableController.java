@@ -1,9 +1,8 @@
 package com.example.demo;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Collection;
 
 @RestController
 @RequestMapping
@@ -16,7 +15,8 @@ public class SomeTableController {
     }
 
     @GetMapping(path = "/table")
-    public List<SomeTable> getAllTables(){
+    @CrossOrigin(origins = "http://localhost:4200")
+    public Collection<SomeTable> getAllTables(){
         return someTableService.getAllTables();
     }
 
